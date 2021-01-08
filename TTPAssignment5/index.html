@@ -2,18 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 5</title>
-    <link rel = "stylesheet" href = "style.css">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Assignment #5</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="d1">1</div>
-        <div class="d2">2</div>
-        <div class="d3">3</div>
-        <div class="d4">4</div>
-        <div class="d5">5</div>
-    </div>
-    <script src = "index.js"></script>
+    <!--add rows to the grid -->
+    <button onclick = "addRow()">Add Row</button>
+    <!--add columns to the grid-->
+    <button onclick = "addColumn()">Add Column</button>
+  <br>
+    <!--remove rows from the grid-->
+    <button onclick = "removeRow()">Remove Row</button>
+     <!--remove columns from the grid-->
+     <button onclick="removeColumn()">Remove Column</button>
+     
+  <!--dropdown color menu-->
+    <form>
+        <p>
+            <label>Select color from dropdown menu!</label>
+            <select id = "color-list"> 
+                <option value="#0000CD">blue</option>
+                <option value="#FF0000">red</option>
+                <option value="#FFA500">orange</option>
+                <option value="#FFFF00">yellow</option>
+            </select>
+        </p>
+    </form>  
+    <!--fill all uncolored cells with the currently selected color-->
+    <button onclick="setUncolored()">Fill uncolored cells!</button>
+    <!--fill all cells with the currently selected color-->
+    <button onclick="setAllCells()">Fill all cells!</button>
+    <!--clear all cells/restore all cells to their original/initial color-->
+    <button onclick="clearAllCells()">Clear all cells!</button>
+    <table id="grid">
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <script src="index.js"></script>
 </body>
-</html>
+</html>      
