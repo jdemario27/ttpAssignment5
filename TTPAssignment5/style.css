@@ -1,7 +1,5 @@
-.container {
-    display: grid;
-    /*add rows to the grid*/
-    grid-template-rows: 20px 20px 20px 20px 20px;
-    grid-template-columns: 20px 20px 20px;
-    background-color: lightskyblue;   
-}
+td {
+    height: 50px;
+    width: 100px;
+    background-color: lime;
+}   
