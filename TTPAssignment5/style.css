@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    /*add rows to the grid*/
+    grid-template-rows: 20px 20px 20px 20px 20px;
+    background-color: lightskyblue;
+}
