@@ -9,29 +9,38 @@
 <body>
     <!--add rows to the grid -->
     <button onclick = "addRow()">Add Row</button>
-    <!--add columns to the grid
-    <button onclick = "addColumn()">Add Column</button>-->
+    <!--add columns to the grid-->
+    <button onclick = "addColumn()">Add Column</button>
   <br>
-    <!--remove rows from the grid 
-    <button onclick = "removeRow()">Remove Row</button> -->
+    <!--remove rows from the grid-->
+    <button onclick = "removeRow()">Remove Row</button>
+     <!--remove columns from the grid-->
+     <button onclick="removeColumn()">Remove Column</button>
+     
   <!--dropdown color menu-->
     <form>
         <p>
-            <label>Select list</label>
-            <select id = "ColorList">
-                <option value="#0000FF">blue</option>
+            <label>Select color from dropdown menu!</label>
+            <select id = "color-list" onchange="setCurrentColor(this.value)"> 
+                <option value="#0000CD">blue</option>
                 <option value="#FF0000">red</option>
-                <option value="#800080">purple</option>
                 <option value="#FFA500">orange</option>
+                <option value="#9400D3">purple</option>
             </select>
         </p>
-    </form>
+    </form>  
+    <!--fill all uncolored cells with the currently selected color-->
+    <button onclick="setUncolored()">Fill uncolored cells!</button>
+    <!--fill all cells with the currently selected color-->
+    <button onclick="setAllCells()">Fill all cells!</button>
+    <!--clear all cells/restore all cells to their original/initial color-->
+    <button onclick="clearAllCells()">Clear all cells!</button>
     <table id="grid">
         <tr>
             <td></td>
             <td></td>
-        </tr>
+        </tr>      
     </table>
     <script src="index.js"></script>
 </body>
-</html> 
+</html>      
